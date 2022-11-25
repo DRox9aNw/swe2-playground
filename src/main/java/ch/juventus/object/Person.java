@@ -58,7 +58,7 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && hasPet == person.hasPet && firstName.equals(person.firstName) && lastName.equals(person.lastName) && address.equals(person.address);
+        return age == person.age && hasPet == person.hasPet && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(address, person.address);
     }
 
     @Override
