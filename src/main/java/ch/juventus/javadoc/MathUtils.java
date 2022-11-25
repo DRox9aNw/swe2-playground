@@ -17,10 +17,10 @@ public class MathUtils {
      * @return sum of all the numbers in the list
      * @throws NullPointerException IF list is empty
      */
-    public double addition(List<Double> numbers) {
+    public double addition(List<Number> numbers) {
         double sum = 0;
-        for (Double number : numbers){
-            sum += number;
+        for (Number number : numbers){
+            sum += number.doubleValue();
         }
         return sum;
     }
@@ -31,8 +31,8 @@ public class MathUtils {
      * @param b subtrahend
      * @return difference
      */
-    public double subtraction(Double a, Double b) {
-        return a - b;
+    public double subtraction(Number a, Number b) {
+        return a.doubleValue() - b.doubleValue();
     }
 
     /**
@@ -41,8 +41,8 @@ public class MathUtils {
      * @param b multiplicand
      * @return product
      */
-    public double multiplication(Double a, Double b) {
-        return a * b;
+    public double multiplication(Number a, Number b) {
+        return a.doubleValue() * b.doubleValue();
     }
 
     /**
@@ -51,7 +51,7 @@ public class MathUtils {
      * @param b divisor
      * @return quotient
      */
-    public double division(Double a, Double b) {
-        return a / b;
+    public double division(Number a, Number b) {
+        return a.doubleValue() / b.doubleValue();
     }
 }
